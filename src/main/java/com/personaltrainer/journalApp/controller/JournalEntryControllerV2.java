@@ -28,25 +28,26 @@ public class JournalEntryControllerV2 {
 
     @PostMapping()
     public boolean createEntry(@RequestBody JournalEntry myEntries){
+        System.out.println("Received entry: " + myEntries.getTitle());
         journalEntryService.saveEntry(myEntries);
         return true;
     }
 
 
     @GetMapping("/id/{myId}")
-    public JournalEntry getJournalById(@PathVariable Long myId){
+    public JournalEntry getJournalById(@PathVariable String myId){
 
         return null;
     }
 
     @DeleteMapping("/id/{myId}")
-    public JournalEntry deleteJournalById(@PathVariable Long myId){
+    public JournalEntry deleteJournalById(@PathVariable String myId){
 
         return null;
     }
 
     @PutMapping("/id/{id}")
-    public JournalEntry updateJournalById(@PathVariable Long id, @RequestBody JournalEntry myEntries){
+    public JournalEntry updateJournalById(@PathVariable String id, @RequestBody JournalEntry myEntries){
 
         return null;
     }

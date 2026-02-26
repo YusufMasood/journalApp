@@ -3,9 +3,9 @@ package com.personaltrainer.journalApp.service;
 import com.personaltrainer.journalApp.entity.JournalEntry;
 import com.personaltrainer.journalApp.repository.JournalEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class JournalEntryService {
 
     @Autowired
